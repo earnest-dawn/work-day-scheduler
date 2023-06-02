@@ -27,7 +27,7 @@ $("#time").text(day);
       }
     });
   }
-  
+  timeTracker();
  setInterval(timeTracker, 15000);
 
 
@@ -59,9 +59,10 @@ $("#time").text(day);
 
 
 saveBtn.on("click", function () {
-  var value = $(this).siblings(".description").val;
+  var value = $(".description").val();
   var apptTime = $(this).parent().attr("id");
   localStorage.setItem(apptTime, value)
+console.log(value, apptTime);
 });
 
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
@@ -74,6 +75,5 @@ saveBtn.on("click", function () {
   $("#hour-4 .description").val(localStorage.getItem("hour-4"));
   $("#hour-5 .description").val(localStorage.getItem("hour-5"));
 
-console.log(localStorage);
 });
 // get lo
