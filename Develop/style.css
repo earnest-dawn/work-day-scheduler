@@ -2,11 +2,13 @@
   --col1: black;
   --col2: white;
   --col3: #fa0101;
+  --col4: #6661ff;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background-image: repeating-linear-gradient(var(--col1), var(--col4), var(--col3) 20%);
 }
 
 textarea {
@@ -37,12 +39,12 @@ textarea {
 }
 
 .past {
-  background-color: #fa0101;
+  background-color: var(--col3);
   color: var(--col1);
 }
 
 .present {
-  background-color: #6661ff;
+  background-color: var(--col4);
   color: var(--col3);
 }
 
@@ -52,11 +54,11 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid  var(--col1);
-  border-top-right-radius: 15px;
+border: dotted var(--col3); 
+ border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: var(--col1);
+  background-color: var(--col1);
+  color: var(--col3);
 }
 
 .saveBtn i:hover {
