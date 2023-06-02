@@ -1,0 +1,65 @@
+:root {
+  --col1: black;
+  --col2: white;
+  --col3: #fa0101;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: var(--col1);
+  border-left: 1px solid var(--col1);
+  padding: 10px;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+.time-block {
+  border-radius: 15px;
+}
+
+.row {
+  border-top: 1px solid var(--col1);
+}
+
+.hour {
+  background-color: var(--col1);
+  color: var(--col3);
+  border: 1px dashed var(--col3);
+}
+
+.past {
+  background-color: #fa0101;
+  color: var(--col1);
+}
+
+.present {
+  background-color: #6661ff;
+  color: var(--col3);
+}
+
+.future {
+  background-color: #44ff00;
+  color: var(--col3);
+}
+
+.saveBtn {
+  border-left: 1px solid  var(--col1);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: var(--col1);
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
