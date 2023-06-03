@@ -1,6 +1,13 @@
+var appointment = $("#parse").text();
+var apptTime = parseInt(appointment);
+console.log(appointment);
+console.log(apptTime);
+
+
+
 $(document).ready(function () {
-var saveBtn = $("saveBtn");
-var day = dayjs().format("dddd, MMM D, YYYY UTC");
+var saveBtn = $(".saveBtn");
+var day = dayjs().format("dddd, MMM D, YYYY");
 $("#time").text(day);
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
@@ -12,7 +19,7 @@ $("#time").text(day);
 
     // loop over time blocks
     $(".time-block").each(function () {
-      var apptTime = parseInt($(this).attr("id").split("-")[1]);
+      // var apptTime = parseInt($(this).attr("id").split("-")[1]);
 
       // check if we've moved past this time
       if (currentTime < apptTime) {
@@ -59,9 +66,8 @@ $("#time").text(day);
 
 
 saveBtn.on("click", function () {
-  var value = $(".description").val();
-  var apptTime = $(this).parent().attr("id");
-  localStorage.setItem(apptTime, value)
+    var value = $(this).siblings(".description").val();
+      localStorage.setItem(apptTime, value)
 console.log(value, apptTime);
 });
 
